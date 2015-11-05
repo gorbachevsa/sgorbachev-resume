@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"> 
+<HTML> 
+<HEAD> 
+<meta charset="UTF-8">
+  <TITLE> 
+  Резюме 
+  </TITLE>
+<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</HEAD> 
+<BODY> 	
+	<div class="navbar ">
+		<nav class="navbar  navbar-fixed-top">
+			<ul class="nav nav-tabs">
+				<li class=""><a data-toggle="tab" href="file:///C:/Users/student/Desktop/working_version/b.html#panel1"  aria-expanded="false">Резюме</a></li>
+				<li class="active" ><a data-toggle="tab" href="file:///C:/Users/student/Desktop/working_version/b2.html#" aria-expanded="true">Я вам подхожу?</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="tab-container">
+		<div  class="tab-pane fade in active"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h1>У вас есть работа для меня,вы можете связаться со мной через:</h1>
+				</div>
+				<div class="col-md-4">
+					<h2> <img src="phone.png" >  Мобильный телефон</h2>
+					<p>8-995-424-78-56</p>
+				</div>
+				<div class="col-md-4">
+					<h2> <span class="glyphicon glyphicon-envelope"></span> email</h2>
+					<p>koshik34@gmail.com</p>
+					<a href="mailto:koshik34@gmail.com?Subject=Привет,есть работа для тебя.">Жми для вызова стандартной программы</a>
+				</div>
+				<div class="col-md-4">
+					<h2><img src="vk.png" > Социальная сеть</h2>
+					<p><a class="btn btn-info" href="http://www.vk.com/stasyamba_kosh" role="button">Жми и пиши!</a></p> 
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</TABLE>
+</BODY> 
+</HTML>
