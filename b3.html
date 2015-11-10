@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	  <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="navbar ">
+		<nav class="navbar  navbar-fixed-top">
+			<ul class="nav nav-tabs">
+				<li class=""><a data-toggle="tab" href="file:///C:Users/Стасямба/Desktop/working_version/b.html#panel1" aria-expanded="false">Резюме</a></li>
+				<li class="" ><a data-toggle="tab" href="file:///C:Users/Стасямба/Desktop/working_version/b2.html#" aria-expanded="true">Я вам подхожу?</a></li>
+				<li class="active"><a data-toggle="tab" href="file:///C:Users/Стасямба/Desktop/working_version/b3.html#" aria-expanded="false">Чат</a></li>
+			</ul>
+		</nav>
+	</div>
+    <div id='messagesDiv' class="text-center">
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+	</div>
+    <script>
+      var myDataRef = new Firebase('https://bmhmsdtl3uo.firebaseio-demo.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+  </body>
+</html>
